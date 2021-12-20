@@ -95,17 +95,15 @@ class TestRequestsCall(unittest.TestCase):
                  'Name or service not known']
             ]],
             ['https://expired.badssl.com', [
-                'Caused by SSLError(SSLError("bad handshake: Error([(',
-                'SSL routines',
-                'tls_process_server_certificate',
+                'Caused by SSLError(SSLCertVerificationError',
+                'certificate has expired',
                 'certificate verify failed',
                 'gettaddrinfo: ',
                 "'104.154.89.105', 443"
             ]],
             ['https://self-signed.badssl.com', [
-                'Caused by SSLError(SSLError("bad handshake: Error([(',
-                'SSL routines',
-                'tls_process_server_certificate',
+                'Caused by SSLError(SSLCertVerificationError',
+                'certificate has expired',
                 'certificate verify failed',
                 'gettaddrinfo',
                 "'104.154.89.105', 443"
